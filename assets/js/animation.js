@@ -13,7 +13,7 @@
             var animatedChildren = _this.find('.animated-child');
             if(isInView){
                 if(animatedChildren.length > 0) {
-                    TweenMax.staggerTo(animatedChildren, 0.4, { y: 0, opacity: 1, delay: 0.1}, 0.2)
+                    TweenMax.staggerTo(animatedChildren, 2, {  opacity: 1, delay: 0.5}, 2)
                 }
             }
         });
