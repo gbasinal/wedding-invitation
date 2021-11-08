@@ -20,22 +20,30 @@ body {
 .main-greeting-container {
     position: absolute;
     bottom: 0;
-    // color : rgba(255,255,255,0.5);
     color: rgba(228, 188, 100,0.7);
     width: 100%;
     height: 100%;
-    // height: 40%;
+    z-index: 9;
     display: flex;
     justify-content: center;
-    align-items: center;
-    // background-color: #5d2032;
-    z-index: 9;
     flex-direction: column;
+    align-items: center;
     background-image: radial-gradient(circle, rgba(93,32,50,1), rgba(93,32,50,1), rgba(93,32,50,0));
     &--v2{
         bottom: 10%;
         height: 30%;
 
+    }
+    .content-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #third {
+        width: 100%;
+        padding: 0 25%;
     }
 }
 
@@ -61,6 +69,9 @@ body {
     // font-family: 'Clicker Script', cursive;
 }
 
+
+
+
 .font-common {
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
@@ -68,6 +79,7 @@ body {
 
 .custom-width {
     width: 300px;
+    margin: 0 auto;
     @media only screen and (max-width: 991px){
         width: 200px;
     }
@@ -79,3 +91,25 @@ body {
         opacity: 0;
     }
 }
+
+
+.btn-container {
+    .btn {   
+        border: 1px solid #bc8e55;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #bb8d55;
+        margin-top: 15px; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.hidden {
+    display: none;
+}
+

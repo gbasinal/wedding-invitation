@@ -12,6 +12,7 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 <!-- CSS only -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <link rel="stylesheet" href="assets/css/build.css">
@@ -21,36 +22,102 @@
   <!-- Preloader -->
   <div id="particles-js">
     <div class="overlay-faded-bg">&nbsp;</div>
-    <div class="w-100 main-greeting-container animated">
-        <h5 class="font-common text-center animated-child">ikaw ay lubos na inaanyayahan <br> sa pag iisang dibdib nina</h5>
-        <div class="d-flex flex-column custom-width py-4 animated-child">
-          <h1 class="font-cursive text-start display-4">Emily</h1>
-          <h4 class="font-cursive text-center">at</h4>
-          <h1 class="font-cursive text-end display-4">Reggie</h1>
+    <div class="w-100 main-greeting-container  text-center">
+        <div class="content-container animated" id="first">
+          <h5 class="font-common text-center animated-child">Ikaw ay lubos na inaanyayahan <br> sa pag-iisang dibdib nina</h5>
+          <div class="d-flex flex-column custom-width py-4 animated-child">
+            <h1 class="font-cursive text-start display-4">Reggie</h1>
+            <h4 class="font-cursive text-center">at</h4>
+            <h1 class="font-cursive text-end display-4">Emily</h1>
+          </div>
+          <h6 class="font-common animated-child">Sa ika-28 ng disyembre 2021, sabado </h6>
+          <h6 class="font-common animated-child">Sa ganap na ika 2:00 ng hapon</h6>
+          <h6 class="font-common animated-child">Sa La Casa Antigo Resort sa lungsod ng Valenzuela</h6>  
+
+          <div class="btn-container text-center animated-child">
+            <div class="btn btn-next "><i class="fas fa-caret-down"></i></div>
+          </div>            
         </div>
-        <h6 class="font-common animated-child">sa ika-28 ng disyembre 2021, sabado </h6>
-        <h6 class="font-common animated-child">sa ganap na ika 2:00 ng hapon</h6>
-        <h6 class="font-common animated-child">sa La Casa Antigo Resort sa lungsod ng Valenzuela</h6>      
+
+        <div class="content-container hidden" id="second">
+          <div class="animated-child mb-3">
+            <h3 class="font-cursive">Punong Tagapangasiwa</h3>
+            <p class="font-common">Pastor Angel D. Agustin </p>
+          </div>
+          <div class="animated-child mb-3">
+            <h3 class="font-cursive">Aming Mga Magulang</h3>
+            <div class="d-flex justify-content-between">
+              <div class="left col-6">
+                <p class="font-common">Ginoong Sandy Aliaga</p>
+                <p class="font-common">Ginang Aproniana Tadena-Aliaga</p>
+              </div>
+              <div class="right col-6">
+                <p class="font-common">Ginoong Russell Monteloyola</p>
+                <p class="font-common">Ginang Gemma Alcantara</p>
+              </div>
+            </div>           
+          </div>
+          <div class="animated-child mb-3">
+            <h3 class="font-cursive">Mga Ninong at Ninang</h3>
+            <div class="d-flex justify-content-between">
+              <div class="left col-6">
+                <p class="font-common">Ginoong Ringgo Basinal</p>
+                <p class="font-common">Ginoong Ildefonso Alcantara</p>
+              </div>
+              <div class="right col-6">
+                <p class="font-common">Ginang Gie Agustin</p>
+                <p class="font-common">Ginang</p>
+              </div>
+            </div>           
+          </div>          
+          <div class="btn-container text-center animated-child">
+            <div class="btn btn-next "><i class="fas fa-caret-down"></i></div>
+          </div>  
+        </div>  
+
+        <div class="content-container hidden" id="third">
+          <div class="animated-child mb-3 w-100">
+            <div class="d-flex justify-content-between">
+              <div class="left col-6">
+                <h3 class="font-cursive">Piling Ginoo</h3>
+                <p class="font-common">Ginoong Arleigh Tadena</p>
+              </div>
+              <div class="right col-6">
+                <h3 class="font-cursive">Binibining Pangdangal</h3>
+                <p class="font-common">Binibining Irish Tolero</p>
+              </div>
+            </div>           
+          </div>
+
+
+          <div class="animated-child mb-3 w-100">
+            <h3 class="font-cursive">Mga Abay</h3>
+            <div class="d-flex justify-content-between">
+              <div class="left col-6">
+                <p class="font-common">Ginoong Michael Ian Alcantara</p>
+                <p class="font-common">Ginoong Fitz Gerald Vergara</p>
+                <p class="font-common">Ginoong Ryan Cabugawan</p>
+                <p class="font-common">Ginoong Mark Jeptah Lim</p>
+                <p class="font-common">Ginoong Marvin Joshua Ileto</p>
+                <p class="font-common">Ginoong Janriz Gamit</p>
+              </div>
+              <div class="right col-6">
+                <p class="font-common">Binibining Angel Rose Suano</p>
+                <p class="font-common">Binibining Ronalyn Mainit</p>
+                <p class="font-common">Binibining Rose Marie Gojar</p>
+              </div>
+            </div>           
+          </div>          
+          <div class="btn-container text-center animated-child">
+            <div class="btn btn-next "><i class="fas fa-caret-down"></i></div>
+          </div>  
+        </div>             
+ 
+
+      
     </div>
 
-    <!-- <div class="w-100 main-greeting-container main-greeting-container--v2 ">
-      <div class="animated">
-        <h4 class="font-cursive text-center animated-child">ikaw ay lubos naming inaanyayahan sa pag iisang dibdib nina</h4>
-      </div>
-      <div class="animated">
-        <h1 class="font-common animated-child">emily at reggie</h1>
-      </div>
-      <div class="animated">
-        <h5 class="font-cursive animated-child">sa ika-28 ng disyembre 2021, sabado </h5>
-      </div>
-      <div class="animated">
-        <h5 class="font-cursive animated-child">sa ganap na ika 2:00 ng hapon</h5>
-      </div>
-      <div class="animated">
-        <h5 class="font-cursive animated-child">sa La Casa Antigo Resort sa lungsod ng Valenzuela</h5>      
-      </div>
-    </div> -->
-    <!-- <div class="overlay-faded-bg overlay-faded-bg--bottom">&nbsp;</div> -->
+
   </div>
 
 

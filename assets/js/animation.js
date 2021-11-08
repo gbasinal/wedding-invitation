@@ -5,6 +5,7 @@
   
 	Animation.prototype.init = function() {
         Animation.prototype.inView();
+        Animation.prototype.nextButtonAnimation();
 	};
 
     Animation.prototype.inView = function() {
@@ -13,11 +14,36 @@
             var animatedChildren = _this.find('.animated-child');
             if(isInView){
                 if(animatedChildren.length > 0) {
-                    TweenMax.staggerTo(animatedChildren, 2, {  opacity: 1, delay: 0.5}, 2)
+                    TweenMax.staggerTo(animatedChildren, 1, {  opacity: 1, delay: 0.3},.5)
                 }
             }
         });
     }
+
+
+    Animation.prototype.nextButtonAnimation = function(){
+        $(".btn-next").click(function(){
+
+            if($("#first").hasClass("hidden") === false){
+                TweenMax.to('#first', 1, {  opacity: 0, onComplete: function(){
+                    $("#first").addClass("hidden");
+                    $("#second").removeClass("hidden");
+                    $("#second").addClass("animated");
+                    Animation.prototype.inView();
+                }})
+            }
+            if($("#second").hasClass("hidden") === false){
+                TweenMax.to('#second', 1, {  opacity: 0, onComplete: function(){
+                    $("#second").addClass("hidden");
+                    $("#third").removeClass("hidden");
+                    $("#third").addClass("animated");
+                    Animation.prototype.inView();
+                }})
+            }            
+
+        })
+    }
+
 
     app.Animation = Animation;
 

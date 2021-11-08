@@ -661,16 +661,26 @@ body canvas {
   color: rgba(228, 188, 100, 0.7);
   width: 100%;
   height: 100%;
+  z-index: 9;
   display: flex;
   justify-content: center;
-  align-items: center;
-  z-index: 9;
   flex-direction: column;
+  align-items: center;
   background-image: radial-gradient(circle, #5d2032, #5d2032, rgba(93, 32, 50, 0));
 }
 .main-greeting-container--v2 {
   bottom: 10%;
   height: 30%;
+}
+.main-greeting-container .content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-greeting-container #third {
+  width: 100%;
+  padding: 0 25%;
 }
 
 .overlay-faded-bg {
@@ -700,6 +710,7 @@ body canvas {
 
 .custom-width {
   width: 300px;
+  margin: 0 auto;
 }
 @media only screen and (max-width: 991px) {
   .custom-width {
@@ -709,5 +720,23 @@ body canvas {
 
 .animated .animated-child {
   opacity: 0;
+}
+
+.btn-container .btn {
+  border: 1px solid #bc8e55;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bb8d55;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=build.css.map */
