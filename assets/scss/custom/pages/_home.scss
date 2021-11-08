@@ -43,7 +43,10 @@ body {
 
     #third {
         width: 100%;
-        padding: 0 25%;
+        @media only screen and (min-width: 1025px){
+            padding: 0 25%;
+        }
+        
     }
 }
 
@@ -113,3 +116,14 @@ body {
     display: none;
 }
 
+h3 {
+    @media only screen and (max-width: 767px){
+        font-size: 16px;
+    }
+}
+
+p {
+    @media only screen and (max-width: 767px){
+        font-size: 14px;
+    }
+}

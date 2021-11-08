@@ -680,7 +680,11 @@ body canvas {
 }
 .main-greeting-container #third {
   width: 100%;
-  padding: 0 25%;
+}
+@media only screen and (min-width: 1025px) {
+  .main-greeting-container #third {
+    padding: 0 25%;
+  }
 }
 
 .overlay-faded-bg {
@@ -738,5 +742,17 @@ body canvas {
 
 .hidden {
   display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  h3 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  p {
+    font-size: 14px;
+  }
 }
 /*# sourceMappingURL=build.css.map */
