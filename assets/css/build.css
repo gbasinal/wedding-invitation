@@ -688,13 +688,20 @@ body canvas {
 }
 
 .overlay-faded-bg {
-  background-image: linear-gradient(to bottom, rgba(93, 32, 50, 0), #5d2032);
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 55%;
-  z-index: 9;
-  display: none;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  height: 50%;
+  z-index: -1;
+  background: linear-gradient(to right, #e4bc64 4px, transparent 4px) 0 0, linear-gradient(to left, #e4bc64 4px, transparent 4px) 100% 100%, linear-gradient(to bottom, #e4bc64 4px, transparent 4px) 0 0, linear-gradient(to top, #e4bc64 4px, transparent 4px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+}
+@media only screen and (max-width: 767px) {
+  .overlay-faded-bg {
+    width: 95%;
+  }
 }
 .overlay-faded-bg--bottom {
   background-image: linear-gradient(to top, rgba(93, 32, 50, 0), #5d2032);
@@ -753,6 +760,28 @@ body canvas {
 @media only screen and (max-width: 767px) {
   p {
     font-size: 14px;
+  }
+}
+
+.map-container {
+  border: 5px solid #e4bc64;
+}
+
+.desktop-view {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .desktop-view {
+    display: block;
+  }
+}
+
+.mobile-view {
+  display: none;
+}
+@media only screen and (max-width: 767px) {
+  .mobile-view {
+    display: block;
   }
 }
 /*# sourceMappingURL=build.css.map */

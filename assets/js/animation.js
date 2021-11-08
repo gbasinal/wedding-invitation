@@ -41,11 +41,32 @@
                     $("#third").addClass("animated");
                     Animation.prototype.inView();
                 }})
-            }            
+            }   
+
+            if($("#third").hasClass("hidden") === false){
+                TweenMax.to('#third', 1, {  opacity: 0, onComplete: function(){
+                    $("#third").addClass("hidden");
+                    $('#fourth').removeAttr('style');
+                    $("#fourth").removeClass("hidden");
+                    $("#fourth").addClass("animated");
+                    Animation.prototype.inView();
+                }})
+            }                      
 
         })
         $(".btn-previous").click(function(){
 
+
+            if($("#second").hasClass("hidden") === false){
+                TweenMax.to('#second', 1, {  opacity: 0, onComplete: function(){
+                    $("#second").addClass("hidden");
+                    $("#first").removeAttr('style');
+                    $("#first").removeClass("hidden");
+                    $("#first").addClass("animated");
+                    Animation.prototype.inView();
+                }})
+            } 
+            
             if($("#third").hasClass("hidden") === false){
                 TweenMax.to('#third', 1, {  opacity: 0, onComplete: function(){
                     $("#third").addClass("hidden");
@@ -55,13 +76,15 @@
                    
                     Animation.prototype.inView();
                 }})
-            }
-            if($("#second").hasClass("hidden") === false){
-                TweenMax.to('#second', 1, {  opacity: 0, onComplete: function(){
-                    $("#second").addClass("hidden");
-                    $("#first").removeAttr('style');
-                    $("#first").removeClass("hidden");
-                    $("#first").addClass("animated");
+            }  
+            
+            if($("#fourth").hasClass("hidden") === false){
+                TweenMax.to('#fourth', 1, {  opacity: 0, onComplete: function(){
+                    $("#fourth").addClass("hidden");
+                    $('#third').removeAttr('style');
+                    $("#third").removeClass("hidden");
+                    $("#third").addClass("animated");
+                   
                     Animation.prototype.inView();
                 }})
             }            
