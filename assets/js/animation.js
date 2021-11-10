@@ -6,6 +6,7 @@
 	Animation.prototype.init = function() {
         Animation.prototype.inView();
         Animation.prototype.nextButtonAnimation();
+        Animation.prototype.openRSVPModal();
 	};
 
     Animation.prototype.inView = function() {
@@ -51,7 +52,17 @@
                     $("#fourth").addClass("animated");
                     Animation.prototype.inView();
                 }})
-            }                      
+            }     
+
+            if($("#fourth").hasClass("hidden") === false){
+                TweenMax.to('#fourth', 1, {  opacity: 0, onComplete: function(){
+                    $("#fourth").addClass("hidden");
+                    $('#fifth').removeAttr('style');
+                    $("#fifth").removeClass("hidden");
+                    $("#fifth").addClass("animated");
+                    Animation.prototype.inView();
+                }})
+            }                              
 
         })
         $(".btn-previous").click(function(){
@@ -87,9 +98,40 @@
                    
                     Animation.prototype.inView();
                 }})
-            }            
+            }     
+            
+            
+            if($("#fifth").hasClass("hidden") === false){
+                TweenMax.to('#fifth', 1, {  opacity: 0, onComplete: function(){
+                    $("#fifth").addClass("hidden");
+                    $('#fourth').removeAttr('style');
+                    $("#fourth").removeClass("hidden");
+                    $("#fourth").addClass("animated");
+                   
+                    Animation.prototype.inView();
+                }})
+            }             
 
         })        
+    }
+
+    Animation.prototype.openRSVPModal = function(){
+        $(".btn-yes").on("click",function(){
+          $(".modal").show();  
+        })
+
+        $(".submit").on("click", function(){
+            $(".form-container").hide();
+            $(".ty-container").removeClass("hidden");
+            $(".ty-container").addClass("d-flex");
+            $(".ty-container").addClass("animated");
+            Animation.prototype.inView();
+
+        })
+
+        $(".btn-close").on("click", function(){
+            $(".modal").hide(); 
+        })
     }
 
 

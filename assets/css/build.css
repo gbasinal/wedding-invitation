@@ -746,6 +746,21 @@ body canvas {
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
+  transition: box-shadow 0.1s, ease-out, 0.5s;
+}
+.btn-container .btn.btn-yes {
+  width: 100%;
+  border-radius: 0;
+}
+.btn-container .btn.btn-no {
+  width: 100%;
+  border-radius: 0;
+  opacity: 0.3;
+}
+.btn-container .btn:hover {
+  box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .hidden {
@@ -784,5 +799,53 @@ body canvas {
   .mobile-view {
     display: block;
   }
+}
+
+.modal {
+  top: 50%;
+  transform: translateY(-25%);
+}
+.modal .modal-content {
+  background-color: #e4bc64;
+  color: #5d2032;
+  border-color: #e4bc64;
+}
+.modal .modal-header {
+  border-color: #5d2032;
+}
+.modal .modal-footer {
+  border: none;
+}
+.modal .modal-body input {
+  color: #5d2032;
+  font-family: "Reey";
+  font-weight: 200;
+  background-color: transparent;
+  text-align: center;
+  border-color: #5d2032;
+  text-transform: capitalize;
+}
+.modal .modal-body input:hover, .modal .modal-body input:focus {
+  box-shadow: none;
+}
+.modal .modal-body input[type=text], .modal .modal-body input[type=number] {
+  padding: 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+  margin: auto;
+  height: 50px;
+  width: auto;
+}
+.modal .btn-yes {
+  color: #5d2032;
+  border-color: #5d2032;
+  margin-top: 0;
+}
+.modal input:-webkit-autofill,
+.modal input:-webkit-autofill:focus {
+  -webkit-transition: background-color 600000s 0s, color 600000s 0s;
+  transition: background-color 600000s 0s, color 600000s 0s;
 }
 /*# sourceMappingURL=build.css.map */

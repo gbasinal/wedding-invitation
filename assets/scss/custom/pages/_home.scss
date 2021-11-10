@@ -120,6 +120,21 @@ body {
         margin-top: 15px; 
         margin-left: auto;
         margin-right: auto;
+        transition: box-shadow .1s,ease-out, .5s;
+        &.btn-yes {
+            width: 100%;
+            border-radius: 0;
+        }
+        &.btn-no {
+            width: 100%;
+            border-radius: 0;
+            opacity: 0.3;
+        }
+        &:hover {
+            box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.75);
+        }
     }
 }
 
@@ -157,5 +172,55 @@ p {
     display: none;
     @media only screen and (max-width: 767px){
         display: block;
+    }
+}
+
+.modal {
+    top: 50%;
+    transform: translateY(-25%);
+    .modal-content {
+        background-color: #e4bc64;
+        color: #5d2032;
+        border-color: #e4bc64;
+    }
+    .modal-header {
+        border-color : #5d2032;
+    }
+    .modal-footer {
+        border: none;
+    }
+    .modal-body {
+        input {
+            color : #5d2032;
+            font-family: 'Reey';
+            font-weight: 200;
+            background-color: transparent;
+            text-align: center;
+            border-color: #5d2032;
+            text-transform: capitalize;
+            &:hover, &:focus {
+                box-shadow: none;
+            }
+        }
+        input[type=text], input[type=number] {
+            padding: 0;
+            border-top : 0;
+            border-left: 0;
+            border-right: 0;
+            border-radius: 0;
+            margin: auto;
+            height: 50px;
+            width: auto;
+        }
+    }
+    .btn-yes {
+        color: #5d2032;
+        border-color: #5d2032;
+        margin-top: 0;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:focus {
+      transition: background-color 600000s 0s, color 600000s 0s;
     }
 }
