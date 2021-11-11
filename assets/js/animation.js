@@ -142,14 +142,6 @@
             console.log(ctx)
             if(ctx > 0){
                 $(".number-of-guest-container").removeClass("hidden")
-                if(ctx == 1 ){
-                    $(".one-guest").removeClass("hidden")
-                    $(".two-guest").addClass("hidden")
-                }else if(ctx == 2 ){
-                    $(".two-guest").removeClass("hidden")
-                    $(".one-guest").addClass("hidden")
-                }
-
             }else {
                 $(".number-of-guest-container").addClass("hidden")
             }

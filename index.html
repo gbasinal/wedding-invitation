@@ -164,7 +164,7 @@
                   <h1 class="font-cursive my-5">Maraming Salamat!</h1>
                 </div>         
                 <div class="btn-container text-center animated-child">
-                  <button class="btn font-common btn-yes">Oo, dadalo ako</button>
+                  <button class="btn font-common btn-yes mb-3">Oo, dadalo ako</button>
                   <div class="btn btn-next "><i class="fas fa-caret-down"></i></div>
                 </div>  
               </div> 
@@ -173,79 +173,60 @@
           </div>
       </div>
     </div>      
-        
-
-
-
-
-
-
-
-        <div class="modal" tabindex="-1">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title font-cursive">Imbitasyon na may Pagtugon</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    
+    <div class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title font-cursive">Imbitasyon na may Pagtugon</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="ty-container pb-2 px-3">
+            <div class="modal-body flex-column">
+              <h4 class="font-cursive animated-child text-start">Paalala :</h4>
+              <p class="font-common animated-child text-start" >Nais po naming paalalahanan ang lahat na sumunod sa "Social Distancing" sa mismong araw na iyon. Hangga't maari, di po namin pinapayagan na magsama ng bata para sa kasiguraduhan ng ating kalusugan. Muli, maraming salamat.</p>
+            </div>
+            <div class="modal-footer justify-content-center btn-container pt-0">
+              <button type="button" class="btn submit btn-agree"><i class="fas fa-caret-down"></i></button>
+            </div>                 
+          </div>              
+          <div class="form-container flex-column hidden">
+            <div class="modal-body">
+              <div class="mb-4">
+                <label  class="form-label font-common">Ilagay ang Pangalan ng dadalo</label>
+                <input type="text" class="form-control" id="name" >
               </div>
-              <div class="ty-container pb-2 px-3">
-                <div class="modal-body flex-column">
-                  <h4 class="font-cursive animated-child text-start">Paalala :</h4>
-                  <p class="font-common animated-child text-start" >Nais po naming paalalahanan ang lahat na sumunod sa "Social Distancing" sa mismong araw na iyon. Hangga't maari, di po namin pinapayagan na magsama ng bata para sa kasiguraduhan ng ating kalusugan. Muli, maraming salamat.</p>
-                </div>
-                <div class="modal-footer justify-content-center btn-container pt-0">
-                  <button type="button" class="btn submit btn-agree"><i class="fas fa-caret-down"></i></button>
-                </div>                 
-              </div>              
-              <div class="form-container flex-column hidden">
-                <div class="modal-body">
-                  <div class="mb-4">
-                    <label  class="form-label font-common">Ilagay ang Pangalan ng dadalo</label>
-                    <input type="text" class="form-control" id="name" >
+              <div class="mb-4">
+                <label class="form-label font-common">Magdadala ka ba ng kasama?</label> <br>
+                <div class="d-flex p-2 justify-content-around">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="1" name="count" id="yes" checked>
+                    <label class="form-check-label" for="yes">
+                      Oo
+                    </label>
                   </div>
-                  <div class="mb-4">
-                    <label class="form-label font-common">Ilan kayong dadalo?</label> <br>
-                    <small class="font-common">Paalala : Hanggang 2 lamang ang maaring maisama</small>
-                    <div class="d-flex p-2 justify-content-around">
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" value="0" name="count" id="zero" checked>
-                        <label class="form-check-label" for="zero">
-                          0
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" value="1" name="count" id="one">
-                        <label class="form-check-label" for="one">
-                          1
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" value="2" name="count" id="two" >
-                        <label class="form-check-label" for="two">
-                          2
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="number-of-guest-container mb-4 hidden">
-                    <label class="form-label font-common" id="guestName">Pangalan ng isasama</label>
-
-                    <div class="hidden one-guest">
-                      <input type="text" class="form-control" id="namePlus1">
-                    </div>
-                    <div class="hidden two-guest">
-                      <input type="text" class="form-control" id="namePlus2-1">
-                      <input type="text" class="form-control" id="namePlus2-2">
-                    </div>                    
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="0" name="count" id="no">
+                    <label class="form-check-label" for="no">
+                      Hindi
+                    </label>
                   </div>
                 </div>
-                <div class="modal-footer justify-content-center btn-container pt-0">
-                  <button type="button" class="btn w-auto submit btn-yes">Ipadala</button>
-                </div>                
+              </div>
+              <div class="number-of-guest-container mb-4">
+                <label class="form-label font-common" id="guestName">Pangalan ng isasama</label>
+                <div class="one-guest">
+                  <input type="text" class="form-control" id="namePlus1">
+                </div>                   
               </div>
             </div>
+            <div class="modal-footer justify-content-center btn-container pt-0">
+              <button type="button" class="btn w-auto submit btn-yes">Ipadala</button>
+            </div>                
           </div>
         </div>
+      </div>
+    </div>
 
       
     </div>
