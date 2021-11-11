@@ -8,6 +8,9 @@
         Animation.prototype.nextButtonAnimation();
         Animation.prototype.openRSVPModal();
         Animation.prototype.addNewField();
+        setTimeout(()=>{
+            Animation.prototype.playAudio();
+        },500)
         
 	};
 
@@ -21,7 +24,6 @@
                 }
             }
         });
-        Animation.prototype.playAudio();
     }
 
 
