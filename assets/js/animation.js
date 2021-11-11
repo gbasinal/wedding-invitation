@@ -163,9 +163,6 @@
               promise
             }).catch(error => {
                 $('#play-pause-button').trigger("click");
-                setTimeout(()=>{
-                    $('#play-pause-button').trigger("click");
-                },250)
             });
           }
 
