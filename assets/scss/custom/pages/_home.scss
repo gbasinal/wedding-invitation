@@ -238,3 +238,14 @@ p {
     background-color: #5d2032;
 }
 
+.bg-music{
+    position: absolute;
+    z-index: 9999;
+    bottom: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    a{
+        color : #e4bc64;
+        text-decoration: none;
+    }
+}
