@@ -8,7 +8,7 @@
         Animation.prototype.nextButtonAnimation();
         Animation.prototype.openRSVPModal();
         Animation.prototype.addNewField();
-        Animation.prototype.playAudio();
+        
 	};
 
     Animation.prototype.inView = function() {
@@ -21,6 +21,7 @@
                 }
             }
         });
+        Animation.prototype.playAudio();
     }
 
 
