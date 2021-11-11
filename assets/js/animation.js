@@ -8,9 +8,9 @@
         Animation.prototype.nextButtonAnimation();
         Animation.prototype.openRSVPModal();
         Animation.prototype.addNewField();
-        setTimeout(()=>{
-            Animation.prototype.playAudio();
-        },500)
+        // setTimeout(()=>{
+        //     Animation.prototype.playAudio();
+        // },500)
         
 	};
 
@@ -187,7 +187,7 @@
 
     app.onLoad(function(){
         console.log('Animation Load');
-        
+        Animation.prototype.playAudio();
     })
 
 
