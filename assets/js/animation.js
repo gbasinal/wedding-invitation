@@ -7,6 +7,7 @@
         Animation.prototype.inView();
         Animation.prototype.nextButtonAnimation();
         Animation.prototype.openRSVPModal();
+        Animation.prototype.addNewField();
 	};
 
     Animation.prototype.inView = function() {
@@ -120,17 +121,38 @@
           $(".modal").show();  
         })
 
-        $(".submit").on("click", function(){
-            $(".form-container").hide();
-            $(".ty-container").removeClass("hidden");
-            $(".ty-container").addClass("d-flex");
-            $(".ty-container").addClass("animated");
+        $(".btn-agree").on("click", function(){
+            $(".ty-container").hide();
+            $(".form-container").removeClass("hidden");
+            $(".form-container").addClass("d-flex");
+            $(".form-container").addClass("animated");
             Animation.prototype.inView();
 
         })
 
         $(".btn-close").on("click", function(){
             $(".modal").hide(); 
+        })
+    }
+
+    Animation.prototype.addNewField = function(){
+        let ctx; 
+        $('input:radio[name="count"]').on("change", function(){
+            ctx = $(this).val();
+            console.log(ctx)
+            if(ctx > 0){
+                $(".number-of-guest-container").removeClass("hidden")
+                if(ctx == 1 ){
+                    $(".one-guest").removeClass("hidden")
+                    $(".two-guest").addClass("hidden")
+                }else if(ctx == 2 ){
+                    $(".two-guest").removeClass("hidden")
+                    $(".one-guest").addClass("hidden")
+                }
+
+            }else {
+                $(".number-of-guest-container").addClass("hidden")
+            }
         })
     }
 
