@@ -151,7 +151,7 @@
 
 
     Animation.prototype.playAudio = function(){
-        var audio = new Audio("../../assets/music/bgmusic.mp3");
+        var audio = new Audio("/assets/music/bgmusic.mp3");
         audio.play();
         $('#play-pause-button').on("click",function(){
         if($(this).hasClass('fa-play'))
