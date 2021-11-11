@@ -155,7 +155,17 @@
 
     Animation.prototype.playAudio = function(){
         var audio = new Audio("assets/music/bgmusic.mp3");
-        audio.play();
+        let promise = audio.play();
+
+
+        if (promise !== undefined) {
+            promise.then(_ => {
+              promise
+            }).catch(error => {
+                $('#play-pause-button').trigger("click")
+            });
+          }
+
         $('#play-pause-button').on("click",function(){
         if($(this).hasClass('fa-play'))
         {
