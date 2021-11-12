@@ -1215,4 +1215,8 @@ body canvas {
   position: absolute;
   bottom: -10%;
 }
+
+.palete {
+  width: 150px;
+}
 /*# sourceMappingURL=build.css.map */
