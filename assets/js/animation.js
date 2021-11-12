@@ -4,10 +4,10 @@
 	var Animation = function() {};
   
 	Animation.prototype.init = function() {
-        Animation.prototype.inView();
         Animation.prototype.nextButtonAnimation();
         Animation.prototype.openRSVPModal();
         Animation.prototype.addNewField();
+        Animation.prototype.initSealModal();
         // setTimeout(()=>{
         //     Animation.prototype.playAudio();
         // },500)
@@ -122,7 +122,7 @@
 
     Animation.prototype.openRSVPModal = function(){
         $(".btn-yes").on("click",function(){
-          $(".modal").show();  
+          $("#rsvp-modal").show();  
         })
 
         $(".btn-agree").on("click", function(){
@@ -158,13 +158,13 @@
         let promise = audio.play();
 
 
-        if (promise !== undefined) {
-            promise.then(_ => {
-              promise
-            }).catch(error => {
-                $('#play-pause-button').trigger("click");
-            });
-          }
+        // if (promise !== undefined) {
+        //     promise.then(_ => {
+        //       promise
+        //     }).catch(error => {
+        //         $('#play-pause-button').trigger("click");
+        //     });
+        //   }
 
         $('#play-pause-button').on("click",function(){
         if($(this).hasClass('fa-play'))
@@ -187,6 +187,18 @@
         };
     }
 
+    Animation.prototype.initSealModal = function(){
+        $("#seal-modal").show();
+
+        $("#seal-modal").on("click", function(){
+            TweenMax.to('#seal-modal', 1, {  opacity: 0, onComplete: function(){
+                $("#seal-modal").remove();
+                Animation.prototype.playAudio();
+                Animation.prototype.inView();
+            }})
+        })
+    }
+
 
     app.Animation = Animation;
 
@@ -197,7 +209,7 @@
 
     app.onLoad(function(){
         console.log('Animation Load');
-        Animation.prototype.playAudio();
+        // Animation.prototype.playAudio();
     })
 
 

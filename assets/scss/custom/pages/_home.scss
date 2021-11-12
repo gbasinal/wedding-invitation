@@ -249,3 +249,46 @@ p {
         text-decoration: none;
     }
 }
+
+#seal-modal {
+    display: none;
+    @media only screen and (max-width: 1024px){
+        display: block;
+    }
+    .modal-content {
+        border-radius: 50%;
+        height: 350px;
+        width: 350px;
+        margin: auto;
+        background-image: url(/assets/img/border.png);
+        background-size: cover;
+        background-color: transparent;
+        border: 0;
+        .modal-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                margin: 0;
+                padding: 0;
+                font-size: 3.5vh;
+                &:first-child {
+                    margin-right: 21%;
+                }
+                &:nth-child(3) {
+                    margin-left: 21%;
+                }
+            }
+
+            .date {
+                position: absolute;
+                bottom: 0;
+                margin-bottom: 25px;
+            }
+            .btn-container {
+                position: absolute;
+                bottom: -10%;
+            }
+        }
+    }
+}
