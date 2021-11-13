@@ -4,12 +4,7 @@
 	var Animation = function() {};
   
 	Animation.prototype.init = function() {
-        if(Animation.prototype.detectIfMobile() === false){
-            Animation.prototype.inView()
-            Animation.prototype.playAudio();
-        }else {
-            Animation.prototype.initSealModal();
-        }
+
         Animation.prototype.nextButtonAnimation();
         Animation.prototype.openRSVPModal();
         Animation.prototype.addNewField();
@@ -83,6 +78,15 @@
                     Animation.prototype.inView();
                 }})
             }                                       
+            if($("#sixth").hasClass("hidden") === false){
+                TweenMax.to('#sixth', 1, {  opacity: 0, onComplete: function(){
+                    $("#sixth").addClass("hidden");
+                    $('#seventh').removeAttr('style');
+                    $("#seventh").removeClass("hidden");
+                    $("#seventh").addClass("animated");
+                    Animation.prototype.inView();
+                }})
+            } 
 
         })
         $(".btn-previous").click(function(){
@@ -140,7 +144,18 @@
                    
                     Animation.prototype.inView();
                 }})
-            }                       
+            }     
+            
+            if($("#seventh").hasClass("hidden") === false){
+                TweenMax.to('#seventh', 1, {  opacity: 0, onComplete: function(){
+                    $("#seventh").addClass("hidden");
+                    $('#sixth').removeAttr('style');
+                    $("#sixth").removeClass("hidden");
+                    $("#sixth").addClass("animated");
+                   
+                    Animation.prototype.inView();
+                }})
+            }             
 
         })        
     }
@@ -248,7 +263,12 @@
 
     app.onLoad(function(){
         console.log('Animation Load');
-
+        if(Animation.prototype.detectIfMobile() === false){
+            Animation.prototype.inView()
+            Animation.prototype.playAudio();
+        }else {
+            Animation.prototype.initSealModal();
+        }
         // Animation.prototype.playAudio();
     })
 

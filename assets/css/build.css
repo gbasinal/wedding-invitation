@@ -979,6 +979,12 @@ body canvas {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  max-width: 675px;
+}
+@media only screen and (max-width: 767px) {
+  .main-greeting-container .content-container {
+    max-width: 265px;
+  }
 }
 .main-greeting-container #third {
   width: 100%;
@@ -1218,5 +1224,15 @@ body canvas {
 
 .palete {
   width: 150px;
+}
+
+.hashtag-container {
+  flex-direction: row;
+  justify-content: space-around;
+}
+@media only screen and (max-width: 767px) {
+  .hashtag-container {
+    flex-direction: column;
+  }
 }
 /*# sourceMappingURL=build.css.map */
