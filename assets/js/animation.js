@@ -7,11 +7,13 @@
         if(Animation.prototype.detectIfMobile() === false){
             Animation.prototype.inView()
             Animation.prototype.playAudio();
+        }else {
+            Animation.prototype.initSealModal();
         }
         Animation.prototype.nextButtonAnimation();
         Animation.prototype.openRSVPModal();
         Animation.prototype.addNewField();
-        Animation.prototype.initSealModal();
+        
         // setTimeout(()=>{
         //     Animation.prototype.playAudio();
         // },500)
@@ -212,16 +214,16 @@
 
     Animation.prototype.initSealModal = function(){
 
-        if(Animation.prototype.detectIfMobile()){
-            $("#seal-modal").show();
-            $("#seal-modal").on("click", function(){
-                TweenMax.to('#seal-modal', 1, {  opacity: 0, onComplete: function(){
-                    $("#seal-modal").remove();
-                    Animation.prototype.playAudio();
-                    Animation.prototype.inView();
-                }})
-            })
-        }
+     
+        $("#seal-modal").show();
+        $("#seal-modal").on("click", function(){
+            TweenMax.to('#seal-modal', 1, {  opacity: 0, onComplete: function(){
+                $("#seal-modal").remove();
+                Animation.prototype.playAudio();
+                Animation.prototype.inView();
+            }})
+        })
+        
         
 
 
