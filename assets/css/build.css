@@ -983,7 +983,7 @@ body canvas {
 }
 @media only screen and (max-width: 767px) {
   .main-greeting-container .content-container {
-    max-width: 265px;
+    max-width: 375px;
   }
 }
 .main-greeting-container #third {
