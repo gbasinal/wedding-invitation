@@ -264,7 +264,7 @@
             $.post({
                 // Replace the URL with the one specific for your script
                 headers : { "Content-Type": "Access-Control-Allow-Origin" },
-                url: "apiUrl",
+                url: apiUrl,
                 data: JSON.stringify({
                   method: "POST",
                   sheet: "wedding_guests",
