@@ -8,6 +8,7 @@
         Animation.prototype.nextButtonAnimation();
         Animation.prototype.openRSVPModal();
         Animation.prototype.addNewField();
+        Animation.prototype.sendDataToApi();
         
         // setTimeout(()=>{
         //     Animation.prototype.playAudio();
@@ -251,6 +252,33 @@
         }else {
             return false;
         }
+    }
+
+    Animation.prototype.sendDataToApi = function(){
+        let guest_name = $("#guest-name").val();
+        let plus_one = $("#plus-one").val();
+        let apiUrl = "https://script.google.com/macros/s/AKfycbyIxh8LjeMOccidvtdBzIIhSrrHB1xCL4uQg7inx7SaKQmgE1XhRpLYVETzVAGpsGMEOg/exec"
+        
+        $(".submit").on("click", function(e){
+            e.preventDefault();
+            $.post({
+                // Replace the URL with the one specific for your script
+                headers : { "Content-Type": "Access-Control-Allow-Origin" },
+                url: "apiUrl",
+                data: JSON.stringify({
+                  method: "POST",
+                  sheet: "wedding_guests",
+                  payload: { 
+                      guest_name : guest_name,
+                      plus_one : plus_one
+                   },
+                 
+                }),
+                
+                
+            });
+          
+        })
     }
 
 
