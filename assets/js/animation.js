@@ -172,8 +172,16 @@
             $(".form-container").addClass("d-flex");
             $(".form-container").addClass("animated");
             Animation.prototype.inView();
-
         })
+
+        $(".btn-submit").on("click", function(){
+            $(".ty-container").hide();
+            $(".form-container").addClass("hidden");
+            $(".confirmation-container").removeClass("hidden");
+            $(".confirmation-container").addClass("d-flex");
+            $(".confirmation-container").addClass("animated");
+            Animation.prototype.inView();
+        })        
 
         $(".btn-close").on("click", function(){
             $(".modal").hide(); 
@@ -255,30 +263,27 @@
     }
 
     Animation.prototype.sendDataToApi = function(){
-        let guest_name = $("#guest-name").val();
-        let plus_one = $("#plus-one").val();
-        let apiUrl = "https://script.google.com/macros/s/AKfycbyIxh8LjeMOccidvtdBzIIhSrrHB1xCL4uQg7inx7SaKQmgE1XhRpLYVETzVAGpsGMEOg/exec"
-        
-        $(".submit").on("click", function(e){
-            e.preventDefault();
-            $.post({
-                // Replace the URL with the one specific for your script
-                headers : { "Content-Type": "Access-Control-Allow-Origin" },
-                url: apiUrl,
-                data: JSON.stringify({
-                  method: "POST",
-                  sheet: "wedding_guests",
-                  payload: { 
-                      guest_name : guest_name,
-                      plus_one : plus_one
-                   },
-                 
-                }),
-                
-                
+
+        var form = document.getElementById("guest_form");
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var data = new FormData(event.target);
+            fetch(event.target.action, {
+              method: form.method,
+              body: data,
+              headers: {
+                  'Accept': 'application/json'
+              }
+            }).then(response => {
+
+              form.reset()
+            }).catch(error => {
+
             });
-          
-        })
+        }
+        form.addEventListener("submit", handleSubmit)
+        
+  
     }
 
 

@@ -260,14 +260,14 @@
             </div>                 
           </div>              
           <div class="form-container flex-column hidden">
-            <div class="modal-body">
-              <div class="mb-4">
-                <label  class="form-label font-common">Ilagay ang Pangalan ng dadalo</label>
-                <input type="text" class="form-control" id="guest_name" >
-              </div>
-              <div class="mb-4">
-                <label class="form-label font-common">Magdadala ka ba ng kasama?</label> <br>
-                <form action="" id="guest_form">
+            <form name="basic-rsvp-form" accept-charset="utf-8" action="https://formspree.io/f/xyylranq" method="post" id="guest_form">
+              <div class="modal-body">
+                <div class="mb-4">
+                  <label  class="form-label font-common">Ilagay ang Pangalan ng dadalo</label>
+                  <input type="text" class="form-control" name="primary-guest-name" id="guest_name" >
+                </div>
+                <div class="mb-4">
+                  <label class="form-label font-common">Magdadala ka ba ng kasama?</label> <br>
                   <div class="d-flex p-2 justify-content-around">
                     <div class="form-check">
                       <input class="form-check-input" type="radio" value="1" name="count" id="yes" checked>
@@ -282,19 +282,25 @@
                       </label>
                     </div>
                   </div>
-                </form>
+                </div>
+                <div class="number-of-guest-container mb-4">
+                  <label class="form-label font-common" id="plus_one">Pangalan ng isasama</label>
+                  <div class="one-guest">
+                    <input type="text" class="form-control" name="plus1-guest-name" id="namePlus1">
+                  </div>                   
+                </div>
               </div>
-              <div class="number-of-guest-container mb-4">
-                <label class="form-label font-common" id="plus_one">Pangalan ng isasama</label>
-                <div class="one-guest">
-                  <input type="text" class="form-control" id="namePlus1">
-                </div>                   
+              <div class="modal-footer justify-content-center btn-container pt-0">
+                <button type="submit" class="btn w-auto submit btn-yes btn-submit">Ipadala</button>
               </div>
-            </div>
-            <div class="modal-footer justify-content-center btn-container pt-0">
-              <button type="submit" class="btn w-auto submit btn-yes">Ipadala</button>
-            </div>                
+          </form>                
           </div>
+          <div class="confirmation-container hidden pb-2 px-3">
+            <div class="modal-body flex-column text-center">
+              <h4 class="font-cursive animated-child ">Maraming Salamat sa pag-sagot!</h4>
+              <p class="font-common animated-child mt-4 " >Kami ay nasasabik na makasama ka sa aming espesyal na araw.</p>
+            </div>              
+          </div>            
         </div>
       </div>
     </div>

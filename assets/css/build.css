@@ -1074,6 +1074,13 @@ body canvas {
   -webkit-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.75);
 }
+.btn-container .btn.btn-close-modal {
+  width: 100%;
+  border-radius: 0;
+  color: #5d2032;
+  border-color: #5d2032;
+  margin-top: 0;
+}
 
 .hidden {
   display: none;
